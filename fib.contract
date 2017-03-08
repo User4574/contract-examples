@@ -1,0 +1,8 @@
+lst is need "lists".
+s is need "stdio".
+
+fib is unary {
+  {POST * fib {POST - 1}} but 1 if POST < 2
+}.
+
+s:println lst:each fib lst:map 0 lst:to 10.

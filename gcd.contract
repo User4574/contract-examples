@@ -1,0 +1,8 @@
+s is need "stdio".
+
+gcd is binary {
+  {POST gcd PRE mod POST}
+  but PRE if POST equals 0
+}.
+
+s:println 6 gcd 9.

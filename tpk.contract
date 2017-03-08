@@ -1,0 +1,16 @@
+maths is need "maths".
+lst is need "lists".
+s is need "stdio".
+
+list is ().
+
+11 times {
+  list lst:push atoi s:getln
+}.
+
+function is unary {
+  y is {maths:sqrt {maths:abs POST}} + {5 * {POST maths:pow 3}},
+  s:println f but "TOO LARGE" if y > 400
+}.
+
+function lst:each list.

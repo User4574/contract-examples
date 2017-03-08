@@ -1,0 +1,5 @@
+be "lib".
+
+function four is unary { 4 }.
+
+export four.

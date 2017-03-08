@@ -1,0 +1,4 @@
+l is need "lib".
+s is need "stdio".
+
+s:println l:four.
