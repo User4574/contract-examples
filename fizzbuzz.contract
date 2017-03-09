@@ -1,11 +1,11 @@
 ' Tick (apostrophe) to Tick, or Tick to EOL are comments in Contract.
-' Sharpwords are Contract's metavalues.
-' The sharpwords #true and #false are Contracts' true and false values.
-' The sharpword #undefined is Contract's null value.
+' Sharpwords are Contracts metavalues.
+' The sharpwords #true and #false are Contracts true and false values.
+' The sharpword #undefined is Contracts null value.
 ' Braces define precedence.
-' is is Contract's assignment.
+' is is Contracts assignment.
 ' need imports a Contract library. It returns a namespace from which you can call functions.
-' unary is Contract's arity 1 lambda. Functions are first-class in Contract.
+' unary is Contracts arity 1 lambda. Functions are first-class in Contract.
 ' if is binary. It evaluates the POST expression, and returns PRE if #true or #undefined if #false.
 ' but is binary. If POST is #undefined, it returns PRE, otherwise it returns POST.
 ' to is binary. It takes an int PRE and an int POST and returns an array of int from PRE to POST inclusive.
