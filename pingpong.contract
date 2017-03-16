@@ -1,0 +1,15 @@
+s is need "stdio".
+
+pong is nonary {}.
+
+ping is nonary {
+  s:println "Ping",
+  pong
+}.
+
+pong is nonary {
+  s:println "Pong",
+  ping
+}.
+
+ping.
