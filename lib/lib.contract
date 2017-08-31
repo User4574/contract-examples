@@ -1,5 +1,5 @@
 be "lib".
 
-function four is unary { 4 }.
+function four is nonary { 4 }.
 
 export four.
