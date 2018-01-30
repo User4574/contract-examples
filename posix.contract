@@ -1,0 +1,6 @@
+posix is need "posix".
+stdio is need "stdio".
+
+PID is posix:fork.
+stdio:println "Parent" but "Child" if PID equals 0.
+posix:wait unless PID equals 0.

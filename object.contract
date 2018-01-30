@@ -1,0 +1,38 @@
+l is need "lists".
+s is need "stdio".
+
+a-person is unary {
+  "a-person" l:cons POST
+}.
+
+a-person? is unary {
+  l:car POST equals "a-person"
+}.
+
+person-name is unary {
+  #undefined but {
+    l:car l:cdr POST
+  } if a-person? POST
+}.
+
+person-age is unary {
+  #undefined but {
+    l:caddr POST
+  } if a-person? POST
+}.
+
+fred is a-person ("Fred Jenkins"; 26).
+george is ("Georgia Stevens"; 32).
+
+s:println person-name fred.   '=>Fred Jenkins
+s:println person-age  fred.   '=>26
+s:println person-name george. '=>#undefined
+
+age is unary {
+  #undefined but {
+    a-person (l:cadr POST; l:caddr POST + 1)
+  } if a-person? POST
+}.
+
+s:println person-age age fred. '=>27
+s:println person-age fred.     '=>26
