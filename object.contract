@@ -30,9 +30,9 @@ s:println person-name george. '=>#undefined
 
 age is unary {
   #undefined but {
-    a-person (l:cadr POST; l:caddr POST + 1)
+    a-person (person-name POST; 1 + person-age fred)
   } if a-person? POST
 }.
 
-s:println person-age age fred. '=>27
-s:println person-age fred.     '=>26
+fred is age fred.
+s:println person-age fred.    '=>27
