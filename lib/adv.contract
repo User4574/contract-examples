@@ -1,0 +1,12 @@
+foo is nonary 42.
+bar is nonary 24.
+
+ina is namespace.
+ina exports foo.
+ina exports bar.
+
+
+baz is ina:bar.
+
+adv is namespace.
+adv exports ( ina:foo ; baz ).

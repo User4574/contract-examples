@@ -1,4 +1,4 @@
-l is need "lib".
+l is need "lib". 'need opens a namespace for reading only
 s is need "stdio".
 
 s:println l:four.

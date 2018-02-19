@@ -1,0 +1,6 @@
+i is need "ina". 'cant do this, compile time error, cant find library ina
+a ia need "adv".
+
+adv:foo '=>42
+adv:bar '=>#undefined
+adv:baz '=>24

@@ -1,5 +1,5 @@
-be "lib".
+lib is namespace. 'creates a namespace. must match the filename for needing.
 
 function four is nonary { 4 }.
 
-export four.
+lib exports four.
