@@ -1,0 +1,14 @@
+net is need "net".
+proc is need "miniproc".
+
+handle is unary
+  POST net:send "Hello, world!",
+  net:close POST.
+
+l is net:listen "[::]:1234".
+
+loop
+  a is net:accept l,
+  proc:spawn {
+    handle a
+  }.
