@@ -1,0 +1,54 @@
+'blocks are a pretty much what you expect, a bunch of code and a scope
+
+{
+  var is 42,
+  var2 is 24
+}.
+var '=>#undefined
+
+'blocks can be introduced in two ways
+'squiggly braces create an explicit block, as above
+'the final line of code in an explicit block does not need a terminating full-stop
+
+'the second way is with comma-stringing
+'all comma separated statements constitute an implicit block
+'obviously though, a single line of code by itself does not imply a block
+
+var is 42, var2 is 24.
+var '=>#undefined
+
+var is 42.
+var '=>42
+
+'blocks can be nested, but you need to use explicit blocks to do so
+
+{ var is 42 }, var2 is 24.
+var  '=>#undefined
+var2 '=>#undefined
+
+
+
+
+
+'finally, but important to note, blocks defer execution in a special way
+'this might be confusing at first
+'but it serves a useful purpose, as in the following example
+
+p is need "miniproc".
+
+'lets consider two options
+
+p:spawn
+  handle something.
+
+'this will call handle/1, passing it something
+'THEN spawn a miniproc and pass it the result from handle
+'this is probably not what you are wanting
+
+p:spawn {
+  handle something
+}.
+
+'this time, the block will defer the execution
+'the entire block, unexecuted, will be passed to the miniproc
+'the execution of the handle something will happen inside the miniproc
