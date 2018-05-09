@@ -34,5 +34,5 @@ age is unary {
   } if a-person? POST
 }.
 
-fred is age fred.
-s:println person-age fred.    '=>27
+s:println person-age age fred. '=>27
+s:println person-age fred.     '=>26
