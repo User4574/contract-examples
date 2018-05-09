@@ -1,0 +1,20 @@
+json is need "json".
+s is need "stdio".
+l is need "lists".
+
+exampleobject is unary "exampleobject" l:cons POST.
+
+obj is exampleobject json:load "example.json".
+
+s:println obj.
+'("exampleobject"; ("string"; "string"); ("number"; 7); ("array";
+' (1; 2; 3; 4)); ("object"; (("one"; 1); ("two"; 2); ("three"; 3);
+' ("four"; 4))))
+
+getarray is unary POST l:get "array".
+
+s:println getarray obj.
+'(1; 2; 3; 4)
+
+s:println { obj l:get "object" } l:get "two".
+'2

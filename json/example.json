@@ -1,0 +1,13 @@
+{
+  "string": "string",
+  "number": 7,
+  "array": [
+    1, 2, 3, 4
+  ],
+  "object": {
+    "one": 1,
+    "two": 2,
+    "three": 3,
+    "four": 4
+  }
+}
