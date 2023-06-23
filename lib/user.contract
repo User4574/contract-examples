@@ -1,4 +1,5 @@
 l is need "lib". 'need opens a namespace for reading only
 s is need "stdio".
 
-s:println l:four.
+s:println "Three: $d; Four: %d; Seven: %d"
+  s:format (l:three; l:four; l:two-more-than 5).

@@ -1,0 +1,28 @@
+test is unary {
+  io is need "stdio",
+  foo is 4,
+  bar is 5,
+  io:putln POST
+}.
+
+foo is 7.
+
+test {
+  str is need "string",
+  "%02d" str:format foo
+}. '=> 4
+
+test close {
+  str is need "string",
+  "%02d" str:format foo
+}. '=> 7
+
+test {
+  str is need "string",
+  "%02d" str:format bar
+}. '=> 5
+
+test close {
+  str is need "string",
+  "%02d" str:format bar
+}. '=> Error undefined variable

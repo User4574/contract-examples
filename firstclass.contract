@@ -1,0 +1,25 @@
+'When we say is, we're really defining a variable in our namespace
+x is 4.
+
+'Contract has the n-ary bifs which take a block and return a closure
+unary {
+  POST + 2
+}.
+
+'But variables can hold anything, including functions
+plustwo is unary { POST + 2 }.
+y is plustwo 2.
+
+'Namespaces are contracts record type, but are also "libraries"
+'We can need a namespace, which fetches it from the library path
+'We can then from members from a record
+s is need "stdio".
+p is println from s.
+p "Foo".
+
+'Lets make a namespace
+n is namespace {
+  'We can define members in here
+  'Anything names with a lowercase first letter gets exported as an accessible member
+  Foo is "private".
+

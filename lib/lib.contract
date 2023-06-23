@@ -1,5 +1,9 @@
-lib is namespace. 'creates a namespace. must match the filename for needing.
+' When we need a file, the return value is the final thing returned,
+' just like a block. So when creating a library, we simply export a
+' bare namespace.
 
-function four is nonary { 4 }.
-
-lib exports four.
+namespace {
+  three is 3.
+  four is nonary { 4 }.
+  two-more-than is unary { POST + 2 }.
+}
